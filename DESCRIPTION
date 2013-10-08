@@ -1,0 +1,10 @@
+Package: sentiment
+Type: Package
+Title: NLP sentiment analysis tool in R  
+Version: 1.0
+Date: 2013-09-17
+Author: chris okugami
+Maintainer: chris.okugami <chris.okugami@csiro.au>
+Description: Sentimental text analysis using sentiment140 NLP service
+License: GPL 
+Depends: R (>= 2.5.0), RCurl, rjson, plyr  
