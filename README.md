@@ -31,3 +31,6 @@ without rstudio
 
 For help in R,  
 ?sentiment 
+
+or any issue contact me 
+Chris okugami : http://www.facebook.com/christopher.okugami
