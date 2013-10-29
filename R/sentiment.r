@@ -1,7 +1,6 @@
 #
-#  Todo: add anomaly of sensitement of tweet 
-#  todo: classification of anomaly with using word cloud 
-#
+# mod: 2013-10-30, add auto language detection added. 
+# reference: http://help.sentiment140.com/api 
 
 sentiment <- function(text, verbose=FALSE)
 {
@@ -17,23 +16,25 @@ sentiment <- function(text, verbose=FALSE)
   
   x  <- paste( sprintf("{'text': '%s'}", text),
          collapse = "," ) 
-  
-  
+
   curlPerform(postfields =   
-                sprintf("{'data': [%s]}", x),
+                sprintf('{"language": "auto", "data": [%s]}', x),
               url = "http://www.sentiment140.com/api/bulkClassifyJson", 
               verbose = verbose,
               post = 1L, 
               writefunction = r$update)
   
   r$value()
-   
+  
   # list item to JSON 
   j <- fromJSON(r$value()) 
+  j$language <- NULL 
+  
   k <-  ldply(j, as.data.frame, stringsAsFactors=FALSE) 
   idx.text     <- grep("text", names(k))
   idx.polarity <- grep("polarity", names(k))
-   
+  idx.lang     <- grep("language", names(k))
+  
 output <-function()
 {
   #   The polarity values are:
@@ -56,8 +57,8 @@ output <-function()
   
   if( length(idx.text) == 1)
   {
-    j<-k[,2:3]
-    names(j) <-c('text','polarity') 
+    j<-k[,2:4]
+    names(j) <-c('text','polarity','language') 
     output()
     return (j )
   } else  # multiple case  
@@ -68,10 +69,13 @@ output <-function()
     polarity=unlist( k[,idx.polarity]) 
     names(polarity) <- NULL 
     
+    language=unlist( k[,idx.lang]) 
+    names(language) <- NULL 
     
     j<- data.frame(text=text,
-                   polarity= unlist(polarity) )
-            
+                   polarity= unlist(polarity),
+                   language=unlist(language))
+        
     output()
     return ( j )     
     

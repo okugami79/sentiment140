@@ -6,7 +6,8 @@ R package for sentiment text analysis
 
 * **Easy to use**, quick to run your own sentiment analysis of any text 
 * No additional installation of NLP components - it uses free sentiment140 service
-* Vacaburary tune for Twitter message, _context grammer free_ language model  
+* **No need** for vacaburary building
+* Default language model is tuned for Twitter message, _context free grammer language model__ 
 * Supported languge: English and Spanish
 
 Installation
@@ -24,9 +25,9 @@ without rstudio
   * for unix user, on terminal, where you unzip directory, type R CMD INSTALL sentiment140
   * for window user, **RGUI**, select *Packages menu* -> *Install package(s) from local zip files* 
   
-  
+* Added spanish and english language support 
+
 * require internet connection 
 
 For help in R,  
 ?sentiment 
-

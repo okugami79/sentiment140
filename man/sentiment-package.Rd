@@ -6,7 +6,10 @@
 Sentimental text analysis in R 
 }
 \description{
-Sentiment text analysis tool in R without no NLP compoment installation. It uses sentiment140 web service engine through internet, provides instant negative, positive, neutral text expression recognition, tune to Twitter text analysis.   
+Sentiment text analysis tool in R without no NLP compoment installation. It uses sentiment140 web service engine through internet, provides instant negative, positive, neutral text expression recognition, tune to Twitter text analysis.
+
+It supports English and Spanish ONLY at this time! 
+
 }
 
 \author{
