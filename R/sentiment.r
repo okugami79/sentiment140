@@ -53,7 +53,7 @@ output <-function()
   label(0, "negative")
   label(2, "neutral" )
   label(4, "positive" )  
-  }
+} # output 
   
   if( length(idx.text) == 1)
   {
@@ -72,9 +72,14 @@ output <-function()
     language=unlist( k[,idx.lang]) 
     names(language) <- NULL 
     
-    j<- data.frame(text=text,
-                   polarity= unlist(polarity),
-                   language=unlist(language))
+    # note: R crash on wide character, trick them reading by csv file. 
+    TFILE=tempfile()
+    cat(      
+    sprintf('"%s",%s,"%s"\n', text,unlist(polarity),unlist(language), sep=','),
+    file=TFILE) 
+    
+    j<-read.csv(file=TFILE, header=FALSE)
+    names(j) <- c('text','polarity','language')
         
     output()
     return ( j )     
