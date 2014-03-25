@@ -1,33 +1,35 @@
 sentiment140
 ============
 
-R package for sentiment text analysis
+R package for Twitter sentiment text analysis
 ---- 
 
-* **Easy to use**, quick to run your own sentiment analysis of any text 
-* No additional installation of NLP components - it uses free sentiment140 service
+If you want quick, **no NLP training**, headache free sentiment analysis with Twitter text/grammar in R. __Try this one!__  
+
+
+* **Easy to use**, quick to run your own sentiment analysis of Twitter context free grammer
+
+* No additional installation of NLP components - it uses free sentiment140 service, they do vocaburay training, syntax of hash, http link etc. 
+
 * **No need** for vacaburary building
+
 * Default language model is tuned for Twitter message, _context free grammer language model__ 
+
 * Supported languge: English and Spanish
 
 Installation
 --- 
-with *Rstudio* 
-* Project menu -> New Project -> Version Control -> **Git**
-* Paste following Repository URL: https://github.com/okugami79/sentiment140 
-* Shift-Control b - to build R package 
-* type library(sentiment) at R console,  start using it! 
+require(devtools) 
 
+install_github('sentiment140', 'okugami79')
 
-without rstudio 
-* download zip file from https://github.com/okugami79/sentiment140
-* unzip  downloaded file 
-  * for unix user, on terminal, where you unzip directory, type R CMD INSTALL sentiment140
-  * for window user, **RGUI**, select *Packages menu* -> *Install package(s) from local zip files* 
-  
-* Added spanish and english language support 
+library(sentiment)
+>sentiment('I LOVE #Apple')
 
-* require internet connection 
+>sentiment('I hate #Apple')
+
+or you can just pass vector of string message 
+
 
 For help in R,  
 ?sentiment 

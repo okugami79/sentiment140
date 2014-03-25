@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
 
 <title>sentiment140</title>
 
@@ -145,40 +146,32 @@ hr {
 
 <h2>R package for sentiment text analysis</h2>
 
+<p>If you want quick, <strong>no NLP training</strong>, headache free sentiment analysis with Twitter text/grammar in R. <strong>Try this one!</strong>  </p>
+
 <ul>
-<li><strong>Easy to use</strong>, quick to run your own sentiment analysis of any text </li>
-<li>No additional installation of NLP components - it uses free sentiment140 service</li>
-<li><strong>No need</strong> for vacaburary building</li>
-<li>Default language model is tuned for Twitter message, <em>context free grammer language model</em>_ </li>
-<li>Supported languge: English and Spanish</li>
+<li><p><strong>Easy to use</strong>, quick to run your own sentiment analysis of Twitter context free grammer</p></li>
+<li><p>No additional installation of NLP components - it uses free sentiment140 service, they do vocaburay training, syntax of hash, http link etc. </p></li>
+<li><p><strong>No need</strong> for vacaburary building</p></li>
+<li><p>Default language model is tuned for Twitter message, <em>context free grammer language model</em>_ </p></li>
+<li><p>Supported languge: English and Spanish</p></li>
 </ul>
 
 <h2>Installation</h2>
 
-<p>with <em>Rstudio</em> </p>
+<p>require(devtools) </p>
+
+<p>install_github(&#39;sentiment140&#39;, &#39;okugami79&#39;)</p>
 
 <ul>
-<li>Project menu -&gt; New Project -&gt; Version Control -&gt; <strong>Git</strong></li>
-<li>Paste following Repository URL: <a href="https://github.com/okugami79/sentiment140">https://github.com/okugami79/sentiment140</a> </li>
-<li>Shift-Control b - to build R package </li>
-<li>type library(sentiment) at R console,  start using it! </li>
-</ul>
-
-<p>without rstudio </p>
-
-<ul>
-<li>download zip file from <a href="https://github.com/okugami79/sentiment140">https://github.com/okugami79/sentiment140</a></li>
-<li><p>unzip  downloaded file </p>
-
-<ul>
-<li>for unix user, on terminal, where you unzip directory, type R CMD INSTALL sentiment140</li>
-<li>for window user, <strong>RGUI</strong>, select <em>Packages menu</em> -&gt; <em>Install package(s) from local zip files</em> </li>
-</ul></li>
+<li><p>Added spanish and english language support </p></li>
 <li><p>require internet connection </p></li>
 </ul>
 
 <p>For help in R,<br/>
 ?sentiment </p>
+
+<p>or any issue contact me 
+Chris okugami : <a href="http://www.facebook.com/christopher.okugami">http://www.facebook.com/christopher.okugami</a></p>
 
 </body>
 
