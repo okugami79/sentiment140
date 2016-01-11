@@ -35,4 +35,15 @@ For help in R,
 ?sentiment 
 
 or any issue contact me 
-Chris okugami : http://www.facebook.com/christopher.okugami
+Chris Okugami : http://www.facebook.com/christopher.okugami
+
+IF YOU LIKE TO TRY MANUALLY TRAINING CONTEXT SPECIFIC TEXT RECOGNITION, I RECOMMEND EVERY ONE TO READ THIS R-BLOG. This provides other R package, NLP parser etc. 
+
+R-Blogger Article: "Sentiment analysis with machine learning in R" by Cheng-Jun Wang 
+
+http://www.r-bloggers.com/sentiment-analysis-with-machine-learning-in-r/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+RBloggers+%28R+bloggers%29
+
+
+
+
+
